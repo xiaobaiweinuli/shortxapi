@@ -1,0 +1,22 @@
+{
+  "name": "shortx-docs",
+  "version": "1.0.0",
+  "description": "ShortX API 文档",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "keywords": [
+    "shortx",
+    "automation",
+    "android",
+    "documentation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.0.0"
+  }
+}
