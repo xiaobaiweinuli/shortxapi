@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: 'ShortX',
+  title: '星霜的ShortX使用说明',
   description: 'ShortX 自动化工具 API 文档',
   lang: 'zh-CN',
   
