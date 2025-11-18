@@ -4,7 +4,7 @@
 
 > 🚀 ShortX 自动化工具的完整 API 文档项目
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-badge-id/deploy-status)](https://shortxapi.netlify.app)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/726bcff2-415d-4e8a-8d4c-49cef92392e1/deploy-status)](https://shortxapi.netlify.app)
 
 </div>
 
