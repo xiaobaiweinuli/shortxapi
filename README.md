@@ -61,7 +61,6 @@
 
 ### 5 分钟部署到 Netlify
 
-查看 [快速开始指南](./QUICK_START.md) 了解详细步骤。
 
 ```bash
 # 1. 克隆或下载项目
@@ -121,9 +120,6 @@ shortx-docs/
 ├── netlify.toml                # Netlify 配置
 ├── package.json
 ├── README.md
-├── DEPLOYMENT.md               # 详细部署指南
-├── QUICK_START.md              # 快速开始指南
-└── PROJECT_SUMMARY.md          # 项目总结
 ```
 
 ## 🛠️ 技术栈
@@ -171,9 +167,6 @@ export default defineConfig({
 
 ## 📚 相关文档
 
-- [快速开始指南](./QUICK_START.md) - 5 分钟快速部署
-- [部署指南](./DEPLOYMENT.md) - 详细部署说明
-- [项目总结](./PROJECT_SUMMARY.md) - 完整项目说明
 - [VitePress 文档](https://vitepress.dev/)
 - [Netlify 文档](https://docs.netlify.com/)
 
