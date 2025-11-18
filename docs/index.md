@@ -17,7 +17,7 @@ hero:
       link: /api/overview
     - theme: alt
       text: GitHub
-      link: https://github.com/your-repo/shortx
+      link: https://github.com/xiaobaiweinuli/shortxapi
 
 features:
   - icon: 🎯
@@ -91,11 +91,11 @@ features:
 
 ## 社区
 
-- [在线文档](https://shortxapi.netlify.app) - 访问本文档站点
+- [在线文档](/) - 访问本文档站点
 - [GitHub Issues](https://github.com/xiaobaiweinuli/shortxapi/issues) - 报告问题和建议
 - [官方网站](https://shortx-repo.github.io/ShortX-Pages/zh/) - ShortX 官方文档
 - [Telegram 频道](https://t.me/shortxmod) - 加入社区讨论
-- [行为准则](https://github.com/xiaobaiweinuli/shortxapi/blob/main/CODE_OF_CONDUCT.md) - 社区行为准则
+- [行为准则](/code-of-conduct.html) - 社区行为准则
 
 ---
 
