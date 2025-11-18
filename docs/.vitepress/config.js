@@ -17,6 +17,7 @@ export default defineConfig({
       { text: '指南', link: '/guide/introduction' },
       { text: 'API 参考', link: '/api/overview' },
       { text: '示例', link: '/examples/basic' },
+      { text: '行为准则', link: '/code-of-conduct' },
       {
         text: '相关链接',
         items: [
@@ -81,7 +82,7 @@ export default defineConfig({
     ],
 
     footer: {
-      message: '基于 MIT 许可发布 | <a href="https://github.com/xiaobaiweinuli/shortxapi/blob/main/CODE_OF_CONDUCT.md" target="_blank">行为准则</a> | <a href="https://www.netlify.com" target="_blank" rel="noopener">Powered by Netlify</a>',
+      message: '基于 MIT 许可发布 | <a href="/code-of-conduct.html" target="_blank">行为准则</a> | <a href="https://www.netlify.com" target="_blank" rel="noopener">Powered by Netlify</a>',
       copyright: 'Copyright © 2024-present ShortX'
     },
 
