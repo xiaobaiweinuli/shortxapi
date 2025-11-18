@@ -186,13 +186,11 @@ export default defineConfig({
 4. 推送到分支 (`git push origin feature/AmazingFeature`)
 5. 开启 Pull Request
 
+请阅读我们的 [行为准则](https://shortxapi.netlify.app/code-of-conduct.html) 了解社区规范。
+
 ## 📄 许可证
 
 本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
-
-## 📜 行为准则
-
-我们致力于为每个人提供友好、安全和热情的环境。请阅读我们的 [行为准则](CODE_OF_CONDUCT.md) 了解更多信息。
 
 ## 🔗 相关链接
 
