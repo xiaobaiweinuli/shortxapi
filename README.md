@@ -10,6 +10,12 @@
 
 这是一个使用 VitePress 构建的现代化文档站点，提供 ShortX 自动化工具的完整 API 参考、使用指南和实用示例。
 
+<div align="center">
+  <a href="https://app.netlify.com/start/deploy?repository=https://github.com/xiaobaiweinuli/shortxapi">
+    <img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />
+  </a>
+</div>
+
 ---
 
 <div align="center">
