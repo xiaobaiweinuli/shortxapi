@@ -2,106 +2,67 @@
 layout: home
 
 hero:
-  name: ShortX
-  text: Android 自动化工具
-  tagline: 强大的规则引擎，让自动化触手可及
+  name: ShortX 使用说明
+  text: 面向高级自动化的实战文档
+  tagline: 从动作链、Rhino JS、MVEL、ShortX 内部 API 到 Android 服务能力边界
   image:
     src: /logo.svg
     alt: ShortX
   actions:
     - theme: brand
-      text: 快速开始
-      link: /guide/getting-started
+      text: 开始阅读
+      link: /guide/
     - theme: alt
-      text: API 参考
-      link: /api/overview
+      text: 动作链模型
+      link: /chain/
     - theme: alt
-      text: GitHub
-      link: https://github.com/xiaobaiweinuli/shortxapi
+      text: Rhino JS
+      link: /script/
 
 features:
-  - icon: 🎯
-    title: 规则引擎
-    details: 基于事件-条件-动作的强大规则引擎，支持复杂的自动化场景
-  - icon: 🚀
-    title: 丰富的 API
-    details: 提供完整的 API 接口，支持规则、动作、设备、变量等全方位管理
-  - icon: 🎨
-    title: 灵活扩展
-    details: 支持 JavaScript 和 MVEL 脚本，可自定义动作和条件
-  - icon: 📱
-    title: 系统集成
-    details: 深度集成 Android 系统，支持通知、手势、传感器等多种触发方式
-  - icon: 🔧
-    title: 设备控制
-    details: 支持米家等智能家居设备控制，实现跨平台自动化
-  - icon: 🛡️
-    title: 安全可靠
-    details: 完善的权限管理和错误处理机制，确保自动化任务稳定运行
+  - icon: 📌
+    title: 面向实际自动化
+    details: 围绕动作链、脚本运行时、上下文变量、内部 API 和系统服务边界组织内容，避免泛化 API 文案。
+  - icon: 🔁
+    title: 动作链优先
+    details: 重点解释触发器、条件、动作、上下文变量、jsRet、mvelRet 和 customContextDataKey 的真实数据流。
+  - icon: 🧩
+    title: Rhino 与 MVEL 分层
+    details: 明确 JS、MVEL、MatchJS 的边界，避免浏览器 JS、Node.js 或普通 App 模型误导。
+  - icon: 🛠️
+    title: 面向开发者
+    details: 解释 shortx.*、shortx.executeAction、OooO0O0、Android API、AIDL 服务和源码查阅方法。
+  - icon: ⚠️
+    title: 风险分级
+    details: 系统级、内部服务、破坏性操作和高权限能力会标注适用前提与风险。
+  - icon: 📚
+    title: 保留旧版
+    details: 原网页内容已迁入旧版区，仅作为历史草稿对照。
 ---
 
-## 快速上手
+## 这份文档解决什么问题
 
-### 安装
+ShortX 的脚本不是浏览器 JavaScript，也不是 Node.js。真实的 ShortX 自动化经常运行在 Android/Rhino 环境里，能访问 Java 类、Android framework API、ShortX 公共脚本 API、内部 ShortX 服务、文件、线程、反射、外部 dex/jar 和系统服务。
 
-从以下渠道下载最新版本的 ShortX：
+旧版网页更多是泛化说明，很多地方没有说明动作链上下文、脚本运行边界、变量命名禁区、内部服务入口和 Android 服务风险。本版文档把重点放在“能解释规则为什么这样设计、如何安全改写、如何查证底层接口”。
 
-- [GitHub Releases](https://github.com/ShortX-Repo/ShortX/releases) - 官方发布版本
-- [Telegram 频道](https://t.me/shortxmod) - 获取最新动态和支持
+## 推荐阅读顺序
 
-### 创建第一个规则
+1. [开始](/guide/)
+2. [学习路线](/guide/learning-path)
+3. [动作链总览](/chain/)
+4. [脚本总览](/script/)
+5. [上下文变量速查](/chain/context-variable-reference)
+6. [输出模板](/chain/output-templates)
+7. [状态管理与去重](/chain/state-management)
+8. [API 总览](/api/)
+9. [Android 服务总览](/android/)
+10. [案例总览](/cases/)
+11. [故障排查](/guide/troubleshooting)
+12. [发布与迁移](/guide/release-migration)
+13. [备份与恢复](/guide/backup-restore)
+14. [安全边界](/guide/security-boundary)
 
-```javascript
-// 示例：收到验证码自动复制
-{
-  "facts": [{
-    "@type": "type.googleapis.com/NotificationPosted",
-    "record": {
-      "contentText": ".*验证码.*",
-      "contentRegexOptions": "RegexMatchOptions_ContainsMatchIn"
-    }
-  }],
-  "actions": [{
-    "@type": "type.googleapis.com/WriteClipboard",
-    "text": "{contentText}"
-  }]
-}
-```
+## 使用建议
 
-### 了解更多
-
-- [快速开始指南](/guide/getting-started) - 学习如何创建和管理规则
-- [API 参考](/api/overview) - 查看完整的 API 文档
-- [示例集合](/examples/basic) - 浏览实用的自动化示例
-- [高级应用](/examples/advanced) - 探索复杂场景的实现方法
-
-## 核心功能
-
-### 事件驱动
-监听系统事件自动触发规则：通知、剪贴板、手势、传感器等
-
-### 脚本引擎
-支持 JavaScript 和 MVEL 两种脚本语言，实现复杂的数据处理和逻辑判断
-
-### 变量系统
-局部变量和全局变量支持，实现数据持久化和跨规则通信
-
-### UI 创建
-动态创建悬浮窗、对话框、通知等界面元素，提供丰富的交互体验
-
-## 社区
-
-- [在线文档](/) - 访问本文档站点
-- [GitHub Issues](https://github.com/xiaobaiweinuli/shortxapi/issues) - 报告问题和建议
-- [官方网站](https://shortx-repo.github.io/ShortX-Pages/zh/) - ShortX 官方文档
-- [Telegram 频道](https://t.me/shortxmod) - 加入社区讨论
-- [行为准则](/code-of-conduct.html) - 社区行为准则
-
----
-
-<div style="text-align: center; margin: 40px auto 0; padding: 20px; background: #f5f5f5; border-radius: 8px; max-width: 300px; width: 100%;">
-  <a href="https://www.netlify.com" target="_blank" rel="noopener" style="display: inline-block;">
-    <img src="https://www.netlify.com/v3/img/components/netlify-color-accent.svg" alt="Deploys by Netlify" style="width: 114px; height: 51px; margin: 0 auto;" />
-  </a>
-  <p style="margin-top: 10px; color: #666; text-align: center;">This site is powered by Netlify</p>
-</div>
+不要从底层服务或内部方法开始写规则。先把触发器、条件、动作输出和下游消费者设计清楚，再决定是否需要 JS、MVEL、`shortx.executeAction(...)` 或 Android 服务能力。能用内置动作完成的流程，不要降到更底层的调用。
